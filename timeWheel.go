@@ -1,10 +1,11 @@
 package akTimeWheel
 
 import (
-	"ak-remote/common"
 	"container/list"
 	"sync"
 	"time"
+
+	"github.com/Peakchen/xgameCommon/utils"
 
 	"github.com/Peakchen/xgameCommon/akLog"
 )
@@ -43,21 +44,21 @@ var (
 	twScale = map[TW]int64{
 		TW_SmallMs: 5,
 		TW_BigMs:   50,
-		TW_Sec:     common.Sec2Ms_Int64(1),
-		TW_Min:     common.Sec2Ms_Int64(60),
-		TW_Day:     common.Min2Ms_Int64(30),
-		TW_Month:   common.Hour2Ms_Int64(12),
-		TW_Year:    common.Day2Ms_Int64(15),
+		TW_Sec:     utils.Sec2Ms_Int64(1),
+		TW_Min:     utils.Sec2Ms_Int64(60),
+		TW_Day:     utils.Min2Ms_Int64(30),
+		TW_Month:   utils.Hour2Ms_Int64(12),
+		TW_Year:    utils.Day2Ms_Int64(15),
 	}
 
 	twRange = map[TW]*TWRange{
 		TW_SmallMs: &TWRange{min: 5, max: 100},
 		TW_BigMs:   &TWRange{min: 100, max: 1000},
-		TW_Sec:     &TWRange{min: common.Sec2Ms_Int64(1), max: common.Sec2Ms_Int64(60)},
-		TW_Min:     &TWRange{min: common.Min2Ms_Int64(1), max: common.Min2Ms_Int64(60)},
-		TW_Day:     &TWRange{min: common.Hour2Ms_Int64(1), max: common.Hour2Ms_Int64(24)},
-		TW_Month:   &TWRange{min: common.Day2Ms_Int64(1), max: common.Day2Ms_Int64(30)},
-		TW_Year:    &TWRange{min: common.Month2Ms_Int64(1), max: common.Month2Ms_Int64(12)},
+		TW_Sec:     &TWRange{min: utils.Sec2Ms_Int64(1), max: utils.Sec2Ms_Int64(60)},
+		TW_Min:     &TWRange{min: utils.Min2Ms_Int64(1), max: utils.Min2Ms_Int64(60)},
+		TW_Day:     &TWRange{min: utils.Hour2Ms_Int64(1), max: utils.Hour2Ms_Int64(24)},
+		TW_Month:   &TWRange{min: utils.Day2Ms_Int64(1), max: utils.Day2Ms_Int64(30)},
+		TW_Year:    &TWRange{min: utils.Month2Ms_Int64(1), max: utils.Month2Ms_Int64(12)},
 	}
 )
 

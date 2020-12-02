@@ -1,9 +1,10 @@
 package akTimeWheel
 
 import (
-	"ak-remote/common"
 	"testing"
 	"time"
+
+	"github.com/Peakchen/xgameCommon/utils"
 
 	"github.com/Peakchen/xgameCommon/akLog"
 )
@@ -56,7 +57,7 @@ func Test_TW_BigMs(t *testing.T) {
 func Test_TW_Sec(t *testing.T) {
 	var exit = make(chan int, 1)
 	var count int64
-	var interval int64 = common.Sec2Ms_Float64(2.101)
+	var interval int64 = utils.Sec2Ms_Float64(2.101)
 	var runs int64 = 2
 	var now = time.Now()
 	AddTimer(TW_Sec, interval, runs, func() {
@@ -76,7 +77,7 @@ func Test_TW_Sec(t *testing.T) {
 func Test_TW_Min(t *testing.T) {
 	var exit = make(chan int, 1)
 	var count int64
-	var interval int64 = common.Min2Ms_Float64(1.101)
+	var interval int64 = utils.Min2Ms_Float64(1.101)
 	var runs int64 = 2
 	var now = time.Now()
 	AddTimer(TW_Min, interval, runs, func() {

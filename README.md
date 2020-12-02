@@ -1,8 +1,8 @@
 # akTimeWheel
 ### time wheel
 
-![avatar](https://github.com/Peakchen/akTimeWheel/blob/main/pic/1.png)
+![p1](https://github.com/Peakchen/akTimeWheel/blob/main/pic/1.png)
 
-![avatar](https://github.com/Peakchen/akTimeWheel/blob/main/pic/2.png)
+![p2](https://github.com/Peakchen/akTimeWheel/blob/main/pic/2.png)
 
-![avatar](https://github.com/Peakchen/akTimeWheel/blob/main/pic/timewheel.gif)
+![timewheelGif](https://github.com/Peakchen/akTimeWheel/blob/main/pic/timewheel.gif)
